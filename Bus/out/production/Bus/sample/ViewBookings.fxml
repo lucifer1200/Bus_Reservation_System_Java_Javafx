@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.BookingsController">
+   <children>
+      <Pane layoutX="-2.0" prefHeight="81.0" prefWidth="900.0" style="-fx-background-color: #0598ff;">
+         <children>
+            <Label layoutX="20.0" layoutY="22.0" text="Travelmania" textFill="WHITE">
+               <font>
+                  <Font name="Forte" size="26.0" />
+               </font>
+            </Label>
+            <Label layoutX="396.0" layoutY="50.0" text="Bookings" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Hyperlink layoutX="753.0" layoutY="56.0" onAction="#addbus" text="AddBus" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink layoutX="827.0" layoutY="56.0" onAction="#logout" text="Logout" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Hyperlink>
+         </children>
+      </Pane>
+      <TableView fx:id="table" layoutX="69.0" layoutY="118.0" prefHeight="347.0" prefWidth="781.0">
+        <columns>
+          <TableColumn fx:id="name" prefWidth="108.0" text="Name" />
+          <TableColumn fx:id="phone" prefWidth="94.0" text="Phone" />
+            <TableColumn fx:id="source" prefWidth="89.0" text="Source" />
+            <TableColumn fx:id="destination" minWidth="9.0" prefWidth="104.0" text="Destination" />
+            <TableColumn fx:id="service" prefWidth="103.0" text="Service" />
+            <TableColumn fx:id="date" prefWidth="69.0" text="Date" />
+            <TableColumn fx:id="seats" prefWidth="81.0" text="Seats" />
+            <TableColumn fx:id="amount" prefWidth="125.0" text="Total" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

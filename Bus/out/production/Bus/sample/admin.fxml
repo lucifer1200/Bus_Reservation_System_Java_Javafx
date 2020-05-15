@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AdminController">
+   <children>
+      <Pane layoutX="-2.0" prefHeight="96.0" prefWidth="600.0" style="-fx-background-color: #0598ff;">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Travelmania" textFill="WHITE">
+               <font>
+                  <Font name="Forte" size="26.0" />
+               </font>
+            </Label>
+            <Hyperlink layoutX="532.0" layoutY="62.0" onAction="#logout" text="Logout" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Hyperlink>
+         </children></Pane>
+      <Button fx:id="addbus" layoutX="101.0" layoutY="207.0" mnemonicParsing="false" onAction="#addbus" prefHeight="54.0" prefWidth="165.0" style="-fx-background-color: white; -fx-border-color: #0598ff;" text="Add Bus">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="viewbookings" layoutX="320.0" layoutY="207.0" mnemonicParsing="false" onAction="#viewbookings" prefHeight="54.0" prefWidth="165.0" style="-fx-background-color: white; -fx-border-color: #0598ff;" text="View Bookings">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

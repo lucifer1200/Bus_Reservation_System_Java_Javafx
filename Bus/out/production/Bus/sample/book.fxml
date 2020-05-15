@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1058.0" style="-fx-background-color: white; -fx-border-color: #0598ff;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.BusController">
+   <children>
+      <AnchorPane layoutX="18.0" layoutY="155.0" prefHeight="111.0" prefWidth="527.0" style="-fx-background-color: white;">
+         <children>
+            <ComboBox fx:id="from" editable="true" layoutX="38.0" layoutY="25.0" prefHeight="25.0" prefWidth="126.0" promptText="From" style="-fx-background-color: transparent; -fx-border-color: #0598ff;" />
+            <DatePicker fx:id="date" layoutX="370.0" layoutY="25.0" prefHeight="25.0" prefWidth="142.0" promptText="Select Date" showWeekNumbers="true" style="-fx-border-color: #0598ff;" />
+            <Button fx:id="button" layoutX="230.0" layoutY="69.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#search" prefHeight="28.0" prefWidth="99.0" style="-fx-background-color: white; -fx-border-color: black;" text="Search Buses">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="to" editable="true" layoutX="216.0" layoutY="25.0" prefHeight="27.0" prefWidth="126.0" promptText="To" style="-fx-background-color: transparent; -fx-border-color: #0598ff;" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tableview" layoutX="17.0" layoutY="311.0" prefHeight="160.0" prefWidth="527.0" style="-fx-background-color: transaparent; -fx-border-color: #0598ff; -fx-background-color: #0598ff;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="515.0" AnchorPane.topAnchor="310.0">
+         <columns>
+            <TableColumn fx:id="service" prefWidth="75.0" text="Service" />
+            <TableColumn fx:id="source" prefWidth="75.0" text="Source" visible="false" />
+            <TableColumn fx:id="destination" prefWidth="75.0" text="Destination" visible="false" />
+            <TableColumn fx:id="fare" prefWidth="75.0" text="Fare" />
+            <TableColumn fx:id="dtime" prefWidth="75.0" text="Departure Time" />
+            <TableColumn fx:id="atime" prefWidth="75.0" text="Arrival Time" />
+            <TableColumn fx:id="seats" prefWidth="75.0" text="Available Seats" />
+
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Pane layoutX="567.0" layoutY="136.0" prefHeight="305.0" prefWidth="491.0" style="-fx-background-color: white;">
+         <children>
+            <Label fx:id="sourcelabel" layoutX="83.0" layoutY="52.0" prefHeight="27.0" prefWidth="142.0">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="dlabel" layoutX="320.0" layoutY="53.0" prefHeight="25.0" prefWidth="142.0">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="serlabel" layoutX="80.0" layoutY="90.0" prefHeight="25.0" prefWidth="142.0">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="datelabel" layoutX="334.0" layoutY="90.0" prefHeight="25.0" prefWidth="142.0">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="flabel" layoutX="331.0" layoutY="127.0" prefHeight="25.0" prefWidth="142.0">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtphone" layoutX="331.0" layoutY="14.0" style="-fx-border-color: #0598ff;" />
+            <TextField fx:id="txtname" layoutX="80.0" layoutY="14.0" style="-fx-border-color: #0598ff;" />
+            <Label layoutX="255.0" layoutY="18.0" text="Phone" />
+            <Label layoutX="14.0" layoutY="18.0" text=" Name">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+            <Label layoutX="17.0" layoutY="57.0" text="Source">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+            <Label layoutX="255.0" layoutY="57.0" text="Destination">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+            <Label layoutX="14.0" layoutY="93.0" text="Service ">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+            <Label layoutX="258.0" layoutY="94.0" text="D.O.J">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+            <Label layoutX="14.0" layoutY="130.0" text="No. of Seats">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+            <TextField fx:id="txtseat" layoutX="98.0" layoutY="127.0" prefHeight="25.0" prefWidth="65.0" style="-fx-border-color: #0598ff;" />
+            <Label layoutX="253.0" layoutY="131.0" text=" Fare">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+            <Label layoutX="14.0" layoutY="181.0" text="Available seats" visible="false">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+            <Label fx:id="avaiseats" layoutX="107.0" layoutY="177.0" prefHeight="25.0" prefWidth="88.0" visible="false" />
+            <Button fx:id="book" layoutX="320.0" layoutY="178.0" mnemonicParsing="false" onMouseClicked="#bookticket" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: white; -fx-border-color: #0598ff;" text="Book">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Label layoutX="16.0" layoutY="213.0" prefHeight="19.0" prefWidth="65.0" text="Total Fare">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="totalfare" layoutX="102.0" layoutY="213.0" prefHeight="19.0" prefWidth="99.0">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+            <Button fx:id="proceed" layoutX="209.0" layoutY="254.0" mnemonicParsing="false" onAction="#proceed" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: white; -fx-border-color: #0598ff;" text="Proceed">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="cancel" layoutX="331.0" layoutY="254.0" mnemonicParsing="false" onAction="#cancel" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: white; -fx-border-color: #0598ff;" text="Cancel">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Label layoutX="197.0" layoutY="106.0" text="Search for Bus Tickets" textFill="#0a0a0a">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Pane prefHeight="77.0" prefWidth="1058.0" style="-fx-background-color: #0598ff;">
+         <children>
+            <Label layoutX="14.0" layoutY="16.0" prefHeight="46.0" prefWidth="193.0" text="Travelmania" textFill="WHITE">
+               <font>
+                  <Font name="Forte" size="31.0" />
+               </font>
+            </Label>
+            <Hyperlink fx:id="logout" layoutX="986.0" layoutY="30.0" onAction="#logout" text="Logout" textFill="#070707">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Hyperlink>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

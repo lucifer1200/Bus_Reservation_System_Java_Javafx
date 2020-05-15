@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="698.0" style="-fx-background-color: #0598ff;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <left>
+      <AnchorPane prefHeight="500.0" prefWidth="0.0" style="-fx-background-color: light blue;" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="0.0" prefWidth="355.0" style="-fx-background-color: white;" />
+            <ImageView fitHeight="351.0" fitWidth="335.0" layoutX="92.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/logo.jpeg" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="500.0" prefWidth="351.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <PasswordField fx:id="passwordField" layoutX="115.0" layoutY="238.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField fx:id="textField" layoutX="115.0" layoutY="194.0" promptText="Username" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+            <Button fx:id="button" layoutX="97.0" layoutY="320.0" mnemonicParsing="false" onAction="#button" prefHeight="27.0" prefWidth="197.0" style="-fx-background-color: white; -fx-border-color: #0598ff;" text="Login">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="signup" layoutX="96.0" layoutY="361.0" mnemonicParsing="false" onAction="#signup" prefHeight="27.0" prefWidth="201.0" style="-fx-background-color: white; -fx-border-color: #0598ff;" text="Don't have an account? Sign up ">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Text layoutX="157.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <Button fx:id="adminlogin" layoutX="96.0" layoutY="405.0" mnemonicParsing="false" onAction="#adminlogin" prefHeight="27.0" prefWidth="203.0" style="-fx-background-color: white; -fx-border-color: #0598ff;" text="Admin Login">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <ImageView fitHeight="28.0" fitWidth="29.0" layoutX="62.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-user-50.jpeg" />
+               </image></ImageView>
+            <ImageView fitHeight="28.0" fitWidth="25.0" layoutX="65.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/password.jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
